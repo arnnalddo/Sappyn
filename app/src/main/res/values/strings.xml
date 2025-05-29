@@ -21,8 +21,8 @@
     <string name="app_media_host" translatable="false">media</string>
     <string name="app_ads_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="app_privacy_uri" translatable="false">http://lab.arnaldoalfredo.com/sappyn/terms/</string>
-    <string name="app_main_api_uri" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/android.jsonp</string>
-    <string name="app_main_api_uri_alt" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/android.jsonp</string>
+    <string name="app_main_api_uri" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/app/src/main/assets/data.jsonp</string>
+    <string name="app_main_api_uri_alt" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/app/src/main/assets/data.jsonp</string>
     <string name="app_primary_font_uri" translatable="false">fonts/Baloo2-Regular.ttf</string>
     <string name="app_secondary_font_uri" translatable="false">fonts/Baloo2-Bold.ttf</string>
     <string name="app_font_type" translatable="false">sans-serif</string>

@@ -1,0 +1,46 @@
+[{
+	"info": {
+		"version": 7
+	},
+	"media": [{
+			"id": "bestjazz",
+			"source": "http://c4.auracast.net:8060/radio.mp3",
+			"name": "Sappyn Best Jazz",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": ""
+		},
+		{
+			"id": "newjazziradio",
+			"source": "http://stream.radio.co/sfa2a015de/listen",
+			"name": "Sappyn New Jazz",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": ""
+		},
+		{
+			"id": "smoothjazzglobal",
+			"source": "http://66.85.89.6/2585_128.mp3?icy=https",
+			"name": "Sappyn Smooth Jazz",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": ""
+		},
+		{
+			"id": "smoothlounge",
+			"source": "http://smoothjazz.cdnstream1.com/2586_64.aac",
+			"name": "Sappyn Smooth Lounge",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": ""
+		}
+	]
+}]
