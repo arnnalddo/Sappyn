@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2025 Arnaldo Alfredo.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+
+    <!-- Playback state -->
+    <string name="playback_state_loading">Loading…</string>
+    <string name="playback_state_buffering">Buffering…</string>
+    <string name="playback_state_off">Off</string>
+    <string name="playback_state_live">Live</string>
+    <string name="playback_state_playing">Playing</string>
+    <string name="playback_state_already_playing">is already playing</string>
+    <string name="playback_error_unexpected_end">Unexpected end of file</string>
+    <string name="playback_error_invalid_media_source">Error: invalid media source.</string>
+    <string name="playback_error_no_items">Error: there is no data available.</string>
+    <string name="playback_error_media_unavailable">Error: media is currently unavailable.</string>
+    <string name="playback_error_player_not_ready">Error: media player is not ready.</string>
+
+    <!-- Forms -->
+    <string name="form_state_sending">Sending message…</string>
+    <string name="form_state_sent">Message sent successfully.</string>
+    <string name="form_state_not_sent">The message could not be sent.</string>
+    <string name="form_error_incomplete_fields">Please complete all required fields.</string>
+    <string name="form_error_invalid_name">Please enter your real name.</string>
+    <string name="form_error_invalid_email">Please verify your email address.</string>
+    <string name="form_error_short_message">Please enter a message at least 10 characters.</string>
+
+    <!-- Notifications -->
+    <string name="notification_player_title">Media Playback</string>
+    <string name="notification_player_description">Displays media metadata and allows to control background playback.</string>
+    <string name="notification_power_save_title">Limited performance</string>
+    <string name="notification_power_save_subtitle">Power saving mode is turned on</string>
+    <string name="notification_power_save_description">When power saving mode is turned on in the device, background media playback may be affected, so this notification will be displayed.</string>
+    <string name="notification_select_item_description">Select a media from the main list to start</string>
+    <!-- Temp: "Service notification" (to avoid showing two notifications while calling startForeground with media3) -->
+    <string name="notification_service_title">Media Service</string>
+    <string name="notification_service_description">System-managed process for media playback. This background service ensures audio continues uninterrupted during calls, while using other apps, or when the screen is off. Disabling may cause playback issues.</string>
+
+    <!-- New version -->
+    <string name="update_title">New version available</string>
+    <string name="update_description">A new version of this app is available in the store. Do you want to update it?</string>
+    <string name="update_confirm">Yes, update now</string>
+    <string name="update_later">Maybe later</string>
+
+    <!-- General -->
+    <string name="title_error">Error</string>
+    <string name="title_legal">Legal information</string>
+    <string name="title_licenses">Open source licenses</string>
+    <string name="txt_power_save">Please turn off power saving mode if you encounter issues with this app</string>
+    <string name="txt_error_connection">Connection error</string>
+    <string name="txt_error_unknown">The file may no longer be available or there may be some network error. Please check your internet connection and if the error persists you may need to update the app.</string>
+    <string name="txt_error_network_unavailable">Network unavailable.</string>
+    <string name="txt_error_check_connection">Please check your Internet connection.</string>
+    <string name="txt_error_json">Unable to download the configuration file.</string>
+    <string name="txt_error_loading_content">Error loading content</string>
+    <string name="view_description_play">Play</string>
+    <string name="view_description_pause">Pause</string>
+    <string name="view_description_stop">Stop</string>
+    <string name="view_description_toggle">Play/Stop</string>
+    <string name="view_description_exit_app">Button close application</string>
+    <string name="view_description_image">Image</string>
+    <string name="view_description_logo">Logo</string>
+    <string name="view_description_toggle_button">Button play or stop media</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="retry">Try again</string>
+    <string name="exit">Exit</string>
+    <string name="reserved_rights">All rights reserved</string>
+    <string name="terms_of_use">Terms of use</string>
+
+</resources>

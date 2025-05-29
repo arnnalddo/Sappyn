@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+<!--        <solid android:color="#14888888" />-->
+        <!-- En prelollipop, no se puede usar referencia de color. Hay que crear
+        el recurso para cada tema -->
+        <solid android:color="@color/md_theme_inverseSurface" />
+<!--        <corners android:radius="@dimen/borderRadiusExtraLarge" />-->
+<!--        <stroke android:width="1dp" android:color="@color/primaryVariant" />-->
+<!--        <padding android:top="1.2dp" android:bottom="1.2dp" android:left="1.2dp" android:right="1.2dp" />-->
+    </shape>
+</inset>

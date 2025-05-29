@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2025 Arnaldo Alfredo.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+
+    <!-- Playback state -->
+    <string name="playback_state_loading">Caricamento in corso…</string>
+    <string name="playback_state_buffering">Buffering…</string>
+    <string name="playback_state_off">Spento</string>
+    <string name="playback_state_live">In diretta</string>
+    <string name="playback_state_playing">In riproduzione</string>
+    <string name="playback_state_already_playing">è già in riproduzione</string>
+    <string name="playback_error_unexpected_end">Fine inaspettata del file</string>
+    <string name="playback_error_invalid_media_source">Errore: sorgente multimediale non valida.</string>
+    <string name="playback_error_no_items">Errore: nessun dato disponibile.</string>
+    <string name="playback_error_media_unavailable">Errore: contenuto non disponibile al momento.</string>
+    <string name="playback_error_player_not_ready">Errore: lettore multimediale non pronto.</string>
+
+    <!-- Forms -->
+    <string name="form_state_sending">Invio messaggio…</string>
+    <string name="form_state_sent">Messaggio inviato con successo.</string>
+    <string name="form_state_not_sent">Impossibile inviare il messaggio.</string>
+    <string name="form_error_incomplete_fields">Compila tutti i campi obbligatori.</string>
+    <string name="form_error_invalid_name">Inserisci il tuo nome reale.</string>
+    <string name="form_error_invalid_email">Verifica il tuo indirizzo email.</string>
+    <string name="form_error_short_message">Scrivi un messaggio di almeno 10 caratteri.</string>
+
+    <!-- Notifications -->
+    <string name="notification_player_title">Riproduzione multimediale</string>
+    <string name="notification_player_description">Mostra i metadati e permette di controllare la riproduzione in background.</string>
+    <string name="notification_power_save_title">Prestazioni limitate</string>
+    <string name="notification_power_save_subtitle">Modalità risparmio energia attivata</string>
+    <string name="notification_power_save_description">Con la modalità risparmio energia attiva sul dispositivo, la riproduzione in background potrebbe non funzionare correttamente, quindi verrà mostrata questa notifica.</string>
+    <string name="notification_select_item_description">Seleziona un contenuto dalla lista per iniziare</string>
+    <!-- Temp: "Service notification" (to avoid showing two notifications while calling startForeground with media3) -->
+    <string name="notification_service_title">Servizio multimediale</string>
+    <string name="notification_service_description">Processo di sistema per la riproduzione multimediale. Questo servizio in background assicura che l\'audio continui durante chiamate, uso di altre app o a schermo spento. Disattivarlo potrebbe causare problemi di riproduzione.</string>
+
+    <!-- New version -->
+    <string name="update_title">Nuova versione disponibile</string>
+    <string name="update_description">È disponibile un aggiornamento per questa app. Vuoi installarlo ora?</string>
+    <string name="update_confirm">Sì, aggiorna ora</string>
+    <string name="update_later">Forse più tardi</string>
+
+    <!-- General -->
+    <string name="title_error">Errore</string>
+    <string name="title_legal">Informazioni legali</string>
+    <string name="title_licenses">Licenze open source</string>
+    <string name="txt_power_save">Disattiva la modalità risparmio energia se riscontri problemi con l\'app</string>
+    <string name="txt_error_connection">Errore di connessione</string>
+    <string name="txt_error_unknown">Il file potrebbe non essere più disponibile o potrebbero esserci problemi di rete. Controlla la connessione internet e, se l\'errore persiste, potresti dover aggiornare l\'app.</string>
+    <string name="txt_error_network_unavailable">Rete non disponibile.</string>
+    <string name="txt_error_check_connection">Controlla la tua connessione internet.</string>
+    <string name="txt_error_json">Impossibile scaricare il file di configurazione.</string>
+    <string name="txt_error_loading_content">Errore durante il caricamento</string>
+    <string name="view_description_play">Riproduci</string>
+    <string name="view_description_pause">Pausa</string>
+    <string name="view_description_stop">Stop</string>
+    <string name="view_description_toggle">Riproduci/Stop</string>
+    <string name="view_description_exit_app">Pulsante per chiudere l\'app</string>
+    <string name="view_description_image">Immagine</string>
+    <string name="view_description_logo">Logo</string>
+    <string name="view_description_toggle_button">Pulsante per avviare o fermare la riproduzione</string>
+    <string name="unavailable">Non disponibile</string>
+    <string name="retry">Riprova</string>
+    <string name="exit">Esci</string>
+    <string name="reserved_rights">Tutti i diritti riservati</string>
+    <string name="terms_of_use">Termini di utilizzo</string>
+
+</resources>

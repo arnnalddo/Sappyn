@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2025 Arnaldo Alfredo.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App Basics (no translatable) -->
+    <string name="app_name" translatable="false">Sappyn</string>
+    <string name="app_scheme" translatable="false">sappyn</string>
+    <string name="app_media_host" translatable="false">media</string>
+    <string name="app_ads_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="app_privacy_uri" translatable="false">http://lab.arnaldoalfredo.com/sappyn/terms/</string>
+    <string name="app_main_api_uri" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/android.jsonp</string>
+    <string name="app_main_api_uri_alt" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/android.jsonp</string>
+    <string name="app_primary_font_uri" translatable="false">fonts/Baloo2-Regular.ttf</string>
+    <string name="app_secondary_font_uri" translatable="false">fonts/Baloo2-Bold.ttf</string>
+    <string name="app_font_type" translatable="false">sans-serif</string>
+
+    <!-- Placyback state -->
+    <string name="playback_state_loading">Cargando…</string>
+    <string name="playback_state_buffering">Almacenando en búfer…</string>
+    <string name="playback_state_off">Desconectado</string>
+    <string name="playback_state_live">En vivo</string>
+    <string name="playback_state_playing">En reproducción</string>
+    <string name="playback_state_already_playing">ya se está reproduciendo</string>
+    <string name="playback_error_unexpected_end">Final del archivo inesperado</string>
+    <string name="playback_error_invalid_media_source">Error: fuente multimedia no válida.</string>
+    <string name="playback_error_no_items">Error: no hay datos disponibles.</string>
+    <string name="playback_error_media_unavailable" tools:ignore="Typos">Error: el medio no está disponible en este momento.</string>
+    <string name="playback_error_player_not_ready">Error: el reproductor multimedia no está listo.</string>
+
+    <!-- Forms -->
+    <string name="form_state_sending">Enviando mensaje…</string>
+    <string name="form_state_sent">Mensaje enviado exitosamente.</string>
+    <string name="form_state_not_sent">No se pudo enviar el mensaje.</string>
+    <string name="form_error_incomplete_fields">Por favor, completa todos los campos obligatorios.</string>
+    <string name="form_error_invalid_name">Por favor, ingresa tu nombre real.</string>
+    <string name="form_error_invalid_email">Por favor, verifica tu dirección de correo electrónico.</string>
+    <string name="form_error_short_message">Por favor, escribe un mensaje de al menos 10 caracteres.</string>
+
+    <!-- Notifications -->
+    <string name="notification_player_title">Reproductor multimedia</string>
+    <string name="notification_player_description">Muestra información multimedia y permite controlar la reproducción en segundo plano.</string>
+    <string name="notification_power_save_title">Uso limitado</string>
+    <string name="notification_power_save_subtitle">Modo Ahorro de energía activado y descarga de datos limitada</string>
+    <string name="notification_power_save_description">Cuando el modo Ahorro de energía del dispositivo está activo, la reproducción multimedia en segundo plano podría verse afectada, por lo que se mostrará esta notificación.</string>
+    <string name="notification_select_item_description">Elige un medio de la lista principal para empezar</string>
+    <!-- Temp: "Service notification" (to avoid showing two notifications while calling startForeground with media3) -->
+    <string name="notification_service_title">Servicio multimedia</string>
+    <string name="notification_service_description">Proceso principal de la aplicación para reproducir contenido multimedia. Este servicio mantiene la reproducción activa durante llamadas, al usar otras aplicaciones o con pantalla bloqueada. Desactivarlo impedirá la reproducción de contenido y buen funcionamiento de la aplicación.</string>
+
+    <!-- New version -->
+    <string name="update_title">Nueva versión disponible</string>
+    <string name="update_description">Está disponible en la tienda una nueva versión de esta aplicación. ¿Quieres actualizarla?</string>
+    <string name="update_confirm">Sí, actualizar ahora</string>
+    <string name="update_later">Tal vez después</string>
+
+    <!-- General -->
+    <string name="title_error">Error</string>
+    <string name="title_legal">Información legal</string>
+    <string name="title_licenses">Licencias de código abierto</string>
+    <string name="txt_power_save">Por favor, desactiva el modo Ahorro de energía si encuentras problemas durante la reproducción multimedia</string>
+    <string name="txt_error_connection">Error de conexión</string>
+    <string name="txt_error_unknown">Puede que el archivo ya no esté disponible o que haya algún error de red. Por favor, verifica tu conexión a Internet y si el error persiste, quizá tengas que actualizar la aplicación.</string>
+    <string name="txt_error_network_unavailable">Red no disponible.</string>
+    <string name="txt_error_check_connection">Por favor, verifica tu conexión a Internet.</string>
+    <string name="txt_error_json">No se pudo descargar el archivo de configuración.</string>
+    <string name="txt_error_loading_content">Error al cargar el contenido</string>
+    <string name="view_description_play">Reproducir</string>
+    <string name="view_description_pause">Pausar</string>
+    <string name="view_description_stop">Detener</string>
+    <string name="view_description_toggle">Reproducir/Detener</string>
+    <string name="view_description_exit_app">Botón para cerrar la aplicación</string>
+    <string name="view_description_image">Imagen</string>
+    <string name="view_description_logo">Logo</string>
+    <string name="view_description_toggle_button">Botón para iniciar o detener la reproducción</string>
+    <string name="unavailable">No disponible</string>
+    <string name="retry">Reintentar</string>
+    <string name="exit">Salir</string>
+    <string name="reserved_rights">Derechos reservados</string>
+    <string name="terms_of_use">Términos de uso</string>
+
+</resources>

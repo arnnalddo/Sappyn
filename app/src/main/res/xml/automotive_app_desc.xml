@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<automotiveApp>
+    <!--
+      ~ Esto permite a Android Auto saber que esta aplicación puede actuar como una aplicación de medios.
+      ~ Ver: https://developer.android.com/training/auto/audio/ para más información.
+      -->
+    <uses name="media" />
+</automotiveApp>

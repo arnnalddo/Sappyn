@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2025 Arnaldo Alfredo.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+
+    <dimen name="activityHorizontalMargin">16dp</dimen>
+    <dimen name="activityVerticalMargin">16dp</dimen>
+    <dimen name="activitySecondaryVerticalMargin">8dp</dimen>
+    <dimen name="contentMargin">32dp</dimen>
+    <dimen name="contentSecondaryMargin">24dp</dimen>
+    <dimen name="contentTertiaryMargin">16dp</dimen>
+    <dimen name="dividerLeftMargin">68dp</dimen><!--[listHorizontalMargin]x2 + imageSize-->
+    <dimen name="dividerRightMargin">16dp</dimen>
+    <dimen name="listHorizontalMargin">0dp</dimen>
+    <dimen name="listHorizontalSpace">16dp</dimen>
+    <dimen name="listVerticalMargin">2dp</dimen>
+    <dimen name="listVerticalSpace">8dp</dimen>
+    <dimen name="playerMargin">8dp</dimen>
+    <dimen name="playerSecondaryMargin">0dp</dimen>
+
+    <dimen name="borderWidth">0.33dp</dimen>
+    <dimen name="borderRadiusSmall">4dp</dimen>
+    <dimen name="borderRadiusMedium">8dp</dimen>
+    <dimen name="borderRadiusLarge">12dp</dimen>
+    <dimen name="borderRadiusLargeInset">11.5dp</dimen>
+    <dimen name="borderRadiusExtraLarge">20dp</dimen><!-- borderRadiusMedium + listHorizontalMargin | borderRadiusLarge + playerSecondaryMargin -->
+    <dimen name="playerToggleButton">48dp</dimen>
+    <dimen name="dividerBorderWidth">0.6dp</dimen>
+    <dimen name="imageSize">52dp</dimen>
+    <dimen name="appLogoSize">82dp</dimen>
+
+    <dimen name="mediaListBottomPadding">76dp</dimen><!-- imageSize + playerMargin*3 -->
+
+    <item name="playerLightBackgroundOpacity" format="float" type="dimen">0.05</item>
+    <item name="playerDarkBackgroundOpacity" format="float" type="dimen">0.08</item>
+
+</resources>

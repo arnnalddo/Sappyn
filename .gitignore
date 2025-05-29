@@ -1,0 +1,48 @@
+# Android Studio
+/.idea/
+*.iml
+local.properties
+
+# Gradle
+.gradle/
+build/
+
+# Sistemas operativos
+.DS_Store
+*.log
+*.swp
+*.bak
+~$
+
+# Build/outputs
+*.apk
+*.aar
+*.aab
+*.ap_
+*.keystore
+*.jks
+*.class
+*.jar
+
+# Firebase/Google
+google-services.json
+
+# Tests
+/androidTest/
+/test/
+/reports/
+
+# Profiling
+*.hprof
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Lint y otros
+/lint/
+.navigation/
+/coverage/
+/proguard/
