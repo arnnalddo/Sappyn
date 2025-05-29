@@ -1,1 +1,3 @@
 /build
+/src/androidTest/java/com/arnnalddo/sappyn/ExampleInstrumentedTest.kt
+/src/test/java/com/arnnalddo/sappyn/ExampleUnitTest.kt
