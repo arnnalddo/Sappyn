@@ -15,7 +15,6 @@
 
 package com.arnnalddo.sappyn.adapters
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -58,10 +57,7 @@ class MediaListAdapter(
     // region [Properties]
     private val primaryTypeface: String = context.getString(R.string.app_primary_font_uri)
     private val secondaryTypeface: String = context.getString(R.string.app_secondary_font_uri)
-    //private var lastPosition = 0 // Last item position
-
-    // Property to hold the ID of the currently selected item
-    private var selectedItemId: String? = null
+    private var selectedItemId: String? = null // Flag to hold the ID of the currently selected item
     // endregion
 
     //**********************************************************************************************
@@ -83,8 +79,21 @@ class MediaListAdapter(
         }
     }
 
-    @SuppressLint("RecyclerView") // Lint might warn about position in onClick, but it's handled by adapterPosition
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        bind(holder, position)
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: List<Any>) {
+        if (payloads.isNotEmpty() && payloads[0] == "selection_update") {
+            val item = items?.getOrNull(position) as? MediaListItem
+            (holder as? Row)?.itemView?.isSelected = (item?.id == selectedItemId)
+            return
+        }
+        bind(holder, position)
+    }
+
+    // Helper function to bind data to a ViewHolder
+    private fun bind(holder: RecyclerView.ViewHolder, position: Int) {
         // Ensure position is valid
         if (position == RecyclerView.NO_POSITION || items == null || position >= items!!.size) return
 
@@ -113,33 +122,22 @@ class MediaListAdapter(
     fun setSelectedItemId(itemId: String?) {
         if (selectedItemId == itemId) return // No change
 
-        // Find the position of the previously selected item
-        val oldSelectedPosition = items?.indexOfFirst {
-            (it as? MediaListItem)?.id == selectedItemId
-        } ?: -1
+        // 1. Find positions of old and new selected items
+        val oldPos = items?.indexOfFirst { (it as? MediaListItem)?.id == selectedItemId } ?: -1
+        val newPos = items?.indexOfFirst { (it as? MediaListItem)?.id == itemId } ?: -1
 
-        // Update the selected item ID
+        // 2. Update the selected ID
         selectedItemId = itemId
 
-        // Find the position of the newly selected item
-        val newSelectedPosition = items?.indexOfFirst {
-            (it as? MediaListItem)?.id == selectedItemId
-        } ?: -1
-
-        // Notify adapter to rebind the old and new selected items to update their background
-        if (oldSelectedPosition != -1) {
-            notifyItemChanged(oldSelectedPosition)
-        }
-        if (newSelectedPosition != -1) {
-            notifyItemChanged(newSelectedPosition)
-        }
-        // If item not found (e.g., ID was cleared or item is not in the current list),
-        // the old selected item will still be notified.
+        // 3. Notify changes WITH PAYLOAD to avoid full rebind
+        val payload = "selection_update" // Custom payload to identify partial updates
+        if (oldPos != -1) notifyItemChanged(oldPos, payload)
+        if (newPos != -1) notifyItemChanged(newPos, payload)
     }
     // endregion
 
     //**********************************************************************************************
-    // region [Other necesary stuff]
+    // region [Other necessary stuff]
     private inner class SectionHeader(view: View) : ViewHolder(view) {
         val sectionTitle: TextView = view.findViewById(R.id.sectionTitleView)
         init {
