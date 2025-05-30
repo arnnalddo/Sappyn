@@ -10,7 +10,9 @@
 			"city": "Online",
 			"modulation": "online",
 			"small_image_uri": "",
-			"medium_image_uri": ""
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
 		},
 		{
 			"id": "newjazziradio",
@@ -20,7 +22,21 @@
 			"city": "Online",
 			"modulation": "online",
 			"small_image_uri": "",
-			"medium_image_uri": ""
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
+		},
+		{
+			"id": "fipjazz",
+			"source": "https://icecast.radiofrance.fr/fipjazz-hifi.aac",
+			"name": "Sappyn FIP Jazz",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "https://www.radioswissjazz.ch/_nuxt/img/rsj-logo-claim-desktop.beb322c.png",
+			"medium_image_uri": "https://www.radioswissjazz.ch/_nuxt/img/rsj-logo-claim-desktop.beb322c.png",
+			"is_live": true,
+			"is_video": false
 		},
 		{
 			"id": "smoothjazzglobal",
@@ -30,7 +46,9 @@
 			"city": "Online",
 			"modulation": "online",
 			"small_image_uri": "",
-			"medium_image_uri": ""
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
 		},
 		{
 			"id": "smoothlounge",
@@ -40,7 +58,33 @@
 			"city": "Online",
 			"modulation": "online",
 			"small_image_uri": "",
-			"medium_image_uri": ""
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
+		},
+		{
+			"id": "groovesalad",
+			"source": "https://hls.somafm.com/hls/groovesalad/FLAC/program.m3u8",
+			"name": "Sappyn Groove Salad (HLS)",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
+		},
+		{
+			"id": "bossa130",
+			"source": "https://somafm.com/bossa130.pls",
+			"name": "Sappyn Bossa Beyond (AAC 128k)",
+			"region": "Sappyn",
+			"city": "Online",
+			"modulation": "online",
+			"small_image_uri": "",
+			"medium_image_uri": "",
+			"is_live": true,
+			"is_video": false
 		}
 	]
 }]
