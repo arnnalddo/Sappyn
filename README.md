@@ -1,6 +1,6 @@
 ![UI Showcase](sappyn_ui_showcase.jpg)
 
-# Sappyn App
+# Sappyn
 
 Sappyn is a robust Android media playback application built with modern Android development practices, offering a seamless and intuitive user experience for consuming both live and on-demand media content. It leverages **Media3** for advanced media capabilities.
 
@@ -19,4 +19,8 @@ Sappyn is a robust Android media playback application built with modern Android 
 
 Experience Sappyn. Download it directly from the Google Play Store:
 
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60"/>](https://play.google.com/store/apps/details?id=com.arnnalddo.sappyn)
+<a href="https://play.google.com/store/apps/details?id=com.arnnalddo.sappyn" target="_blank" title="Get it on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60"/></a>
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
