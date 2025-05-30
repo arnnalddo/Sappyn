@@ -5,7 +5,7 @@
   ~ you may not use this file except in compliance with the License.
   ~ You may obtain a copy of the License at
   ~
-  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~      http://www.apache.org/licenses/LICENSE-2.0
   ~
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +21,7 @@
     <string name="app_media_host" translatable="false">media</string>
     <string name="app_ads_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="app_privacy_uri" translatable="false">http://lab.arnaldoalfredo.com/sappyn/terms/</string>
-    <string name="app_main_api_uri" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/app/src/main/assets/data.jsonp</string>
+    <string name="app_main_api_uri" translatable="false">http://lab.arnaldoalfredo.com/sappyn/android.jsonp</string>
     <string name="app_main_api_uri_alt" translatable="false">https://raw.githubusercontent.com/arnnalddo/sappyn/main/app/src/main/assets/data.jsonp</string>
     <string name="app_primary_font_uri" translatable="false">fonts/Baloo2-Regular.ttf</string>
     <string name="app_secondary_font_uri" translatable="false">fonts/Baloo2-Bold.ttf</string>
