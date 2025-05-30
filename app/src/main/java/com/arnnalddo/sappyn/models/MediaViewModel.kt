@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *        http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -77,9 +77,9 @@ class MediaViewModel : ViewModel() {
                     type = ListAdapter.ItemType.HEADER,
                     sectionTitle = currentSectionTitle ?: "Otros"
                 ))
-                mediaItem.isFirstInSection = true // <-- Marcar como primer item de sección
+                mediaItem.isFirstInSection = true // <-- Mark as the first section item
             } else {
-                mediaItem.isFirstInSection = false // <-- No es primer item de sección
+                mediaItem.isFirstInSection = false // <-- It's not the first section item
             }
 
             result.add(mediaItem)
