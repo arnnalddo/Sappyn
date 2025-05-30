@@ -13,58 +13,57 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="false">
+    android:fitsSystemWindows="true">
 
-    <!--<com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/player_bg_view"
-        android:contentDescription="@string/description_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:alpha="?attr/playerImageBackgroundOpacity"
-        app:contentPadding="-500dp"
-        app:tintMode="screen"/>-->
+    <!-- Fragment Container -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="@dimen/activitySecondaryVerticalMargin"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:baselineAligned="false"
-        android:paddingStart="0dp"
-        android:paddingEnd="@dimen/playerMargin">
+    <!-- Player Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fragment_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginVertical="@dimen/playerMargin"
+        android:layout_marginEnd="@dimen/playerMargin"
+        android:visibility="gone">
 
-        <!-- Lista -->
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.1"
-            android:paddingBottom="@dimen/contentSecondaryMargin"/>
-
-        <!-- Reproductor -->
         <include
             android:id="@+id/player_layout"
             layout="@layout/inc_player"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.9"
-            android:layout_gravity="bottom"
-            android:layout_marginVertical="@dimen/contentMargin"
-            android:layout_marginEnd="@dimen/playerMargin"
-            android:visibility="gone" />
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Footer -->
     <TextView
         android:id="@+id/footer_tv"
         android:contentDescription="@string/reserved_rights"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="@dimen/activitySecondaryVerticalMargin"
         android:layout_marginBottom="@dimen/activitySecondaryVerticalMargin"
         android:layout_marginStart="@dimen/activityHorizontalMargin"
@@ -73,4 +72,4 @@
         android:textAppearance="?attr/textAppearanceBodySmall"
         android:visibility="gone"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

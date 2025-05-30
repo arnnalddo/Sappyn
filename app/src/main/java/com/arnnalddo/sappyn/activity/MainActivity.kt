@@ -572,10 +572,10 @@ class MainActivity : AppCompatActivity(), FragmentListener, MediaFragment.Listen
 
     // Helper function to show the player layout with optional animation
     private fun showPlayerLayout(animated: Boolean) {
-        if (!binding.playerLayout.root.isVisible) {
+        if (!binding.playerContainer.isVisible) {
             if (animated && !isPlayerLayoutInitiallyShownAnimated) {
                 Log.d(TAG, "Showing player layout with animation.")
-                binding.playerLayout.root.apply {
+                binding.playerContainer.apply {
                     alpha = 0f
                     translationY = 50f
                     visibility = View.VISIBLE
@@ -591,17 +591,17 @@ class MainActivity : AppCompatActivity(), FragmentListener, MediaFragment.Listen
                 }
             } else {
                 Log.d(TAG, "Showing player layout without animation.")
-                binding.playerLayout.root.visibility = View.VISIBLE
+                binding.playerContainer.visibility = View.VISIBLE
             }
         }
     }
 
     // Helper function to hide the player layout
     private fun hidePlayerLayout() {
-        if (binding.playerLayout.root.isVisible) {
+        if (binding.playerContainer.isVisible) {
             Log.d(TAG, "Hiding player layout.")
             // Optional: Add a fade-out or slide-down animation if desired
-            binding.playerLayout.root.visibility = View.GONE
+            binding.playerContainer.visibility = View.GONE
         }
     }
 
@@ -774,6 +774,7 @@ class MainActivity : AppCompatActivity(), FragmentListener, MediaFragment.Listen
         Ion.with(binding.playerLayout.playerImageView)
             .placeholder(R.drawable.placeholder_album) // Placeholder while loading
             .error(R.drawable.placeholder_album) // ion handles the error case
+            .deepZoom() // Turn off automatic resize
             .fadeIn(true) // FadeIn after loading
             .crossfade(true) // Crossfade between images
             .load(uri.toString())
