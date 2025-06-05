@@ -173,7 +173,6 @@ class MediaFragment : AppFragment(), ListAdapter.ItemClicklistener {
 
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "onStart() called.")
         if (deepLinkMediaId != null && items.isNotEmpty()) {
             handleDeepLinkPlayback()
         } // If items is empty, drawList will handle it
@@ -181,7 +180,6 @@ class MediaFragment : AppFragment(), ListAdapter.ItemClicklistener {
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume() called.")
         // Ensure the correct item is selected in the list when fragment is resumed
         // This is handled in onViewCreated/handleAutoplayLastItem/handleDeepLinkPlayback
         // but a resume might also need a check if the last played item changed while in background.
@@ -364,16 +362,15 @@ class MediaFragment : AppFragment(), ListAdapter.ItemClicklistener {
         }
 
         if (viewModel.mediaItems.value.isNullOrEmpty()) {
-            Log.d(TAG, "No data in ViewModel. Loading from repository or API...")
+            Log.d(TAG, "No data in ViewModel.")
             loadFromRepositoryOrApi()
         }
     }
 
     private fun loadFromRepositoryOrApi() {
-        // Try repository first
+        Log.d(TAG, "Trying to use repository data...")
         (activity as? MainActivity)?.mediaRepository?.getMediaList().let { savedMediaItems ->
             if (savedMediaItems != null && savedMediaItems.isNotEmpty()) {
-                Log.d(TAG, "Try to use repository data.")
                 // Convert MediaItem back to MediaListItem for the adapter
                 items.clear()
                 savedMediaItems.mapNotNull { mediaItem ->
@@ -399,7 +396,7 @@ class MediaFragment : AppFragment(), ListAdapter.ItemClicklistener {
                     handleInitialSelection()
                 }
             } else {
-                Log.d(TAG, "No data in repository, try to fetch from API...")
+                Log.d(TAG, "Try to fetch data from API...")
                 fetchDataFromApi(apiUrl)
             }
         }
@@ -472,7 +469,7 @@ class MediaFragment : AppFragment(), ListAdapter.ItemClicklistener {
                                 }
                             }
 
-                            Log.d(TAG, "API response processed with ${items.size} items.")
+                            Log.i(TAG, "API response processed with ${items.size} items.")
                         }
 
                         // After populating 'items', call drawList to update the UI and save to repo

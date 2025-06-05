@@ -42,6 +42,7 @@ import com.google.gson.JsonSyntaxException
  */
 class MediaRepository private constructor(private val prefs: SharedPreferences) {
 
+    private var cachedMediaList: List<MediaItem>? = null
     private val gson = GsonBuilder()
         .registerTypeAdapter(MediaItem::class.java, MediaItemTypeAdapter())
         .create()
@@ -62,7 +63,15 @@ class MediaRepository private constructor(private val prefs: SharedPreferences) 
         // -- Other media keys --
         const val PREF_KEY_LOOP_ENABLED = "loop_enabled"
         const val PREF_KEY_FULL_MEDIA_LIST = "full_media_list"
-        fun create(context: Context): MediaRepository {
+
+        @Volatile private var instance: MediaRepository? = null
+        fun getInstance(context: Context): MediaRepository {
+            return instance ?: synchronized(this) {
+                instance ?: create(context).also { instance = it }
+            }
+        }
+
+        private fun create(context: Context): MediaRepository {
             val prefs = context.getSharedPreferences(Util.PREFS_NAME, Context.MODE_PRIVATE)
             return MediaRepository(prefs)
         }
@@ -82,20 +91,35 @@ class MediaRepository private constructor(private val prefs: SharedPreferences) 
             putString(PREF_KEY_FULL_MEDIA_LIST, json)
             apply()
         }
+        cachedMediaList = validItems
         Log.d(TAG, "Media list saved with ${validItems.size} items.")
     }
 
-    // Deserialize Array<MediaItem> from JSON and map to List<MediaItem>
     fun getMediaList(): List<MediaItem> {
+        return if (cachedMediaList != null) {
+            Log.d(TAG, "Cached media list found with ${cachedMediaList?.size ?: 0} items")
+            cachedMediaList!!
+        } else {
+            loadMediaList().also {
+                if (it.isNotEmpty()) {
+                    Log.d(TAG, "Media list loaded with ${it.size} items")
+                    cachedMediaList = it
+                }
+            }
+        }
+    }
+
+    // Deserialize Array<MediaItem> from JSON and map to List<MediaItem>
+    private fun loadMediaList(): List<MediaItem> {
         Log.d(TAG, "Checking preferences for media list...")
         val json = prefs.getString(PREF_KEY_FULL_MEDIA_LIST, null)
-        // Handle potential null or empty string from prefs.getString
+
         if (json.isNullOrEmpty() || json == "[]") {
             Log.d(TAG, "No media list found in preferences or it's empty.")
             return emptyList()
         }
-        Log.d(TAG, "A raw saved media list was found. Try to deserialize...")
-        // Use a try-catch in case the stored JSON is invalid
+
+        Log.d(TAG, "Found saved media list, deserializing...")
         return try {
             gson.fromJson(json, Array<MediaItem>::class.java)
                 .toList()

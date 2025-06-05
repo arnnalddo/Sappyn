@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity(), FragmentListener, MediaFragment.Listen
         setContentView(binding.root)
 
         // Initialize MediaRepository
-        mediaRepository = MediaRepository.create(applicationContext)
+        mediaRepository = MediaRepository.getInstance(applicationContext)
 
         // Load animations
         fabRotationInAnim = AnimationUtils.loadAnimation(this, R.anim.rotation_in_anim)

@@ -137,7 +137,7 @@ class MediaService : MediaSessionService(), MediaSession.Callback, Player.Listen
         ContextCompat.registerReceiver(this, localCommandReceiverForSystem, powerSaveIntentFilter, ContextCompat.RECEIVER_NOT_EXPORTED)
 
         // 2. Initialize Repository and PlaylistManager
-        mediaRepository = MediaRepository.create(applicationContext)
+        mediaRepository = MediaRepository.getInstance(applicationContext)
         playlistManager = PlaylistManager(mediaRepository, mediaRepository::saveLoopState)
 
         // 3. Set up AudioAttributes
