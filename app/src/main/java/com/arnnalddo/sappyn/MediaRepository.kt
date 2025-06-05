@@ -34,9 +34,22 @@ import com.google.gson.JsonSyntaxException
  *
  * This class handles saving and retrieving lists of [MediaItem] objects,
  * the last played media item, playback position, and loop state.
- * It uses Gson for serializing and deserializing [MediaItem] objects to and from JSON.
+ * It uses Gson for serializing and deserializing [MediaItem] objects to and from JSON,
+ * with a custom [MediaItemTypeAdapter] for handling [MediaItem] specific serialization.
  *
- * The constructor is private to enforce instantiation through the [create] factory method.
+ * The constructor is private to enforce instantiation through the [getInstance] singleton factory method,
+ * which ensures only one instance of the repository exists.
+ *
+ * It provides methods for:
+ * - Saving and retrieving the full list of media items.
+ * - Saving and retrieving the last played media item, including its metadata and playback position.
+ * - Saving and retrieving the loop state for playback.
+ * - Retrieving a media item by its ID.
+ * - Clearing the playback history (last played item and position).
+ *
+ * Media items are cached in memory to improve performance for frequent access.
+ * Validation is performed on media items before saving to ensure data integrity,
+ * specifically checking for non-blank media IDs and valid media URIs.
  *
  * @property prefs The [SharedPreferences] instance used for storing media data.
  */
