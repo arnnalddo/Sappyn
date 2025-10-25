@@ -1,4 +1,4 @@
-![UI Showcase](sappyn_ui_showcase.jpg)
+![UI Showcase](https://lh3.googleusercontent.com/d/1qOlm4N0sKY46zmhILd9QQHjokZiEIsyP)
 
 # Sappyn
 
